@@ -1,74 +1,200 @@
-# Product Details and Trend Analysis Web Application
+
+# SMILE - SSGUPTA
 
 ## Overview
 
-This web application provides detailed product information along with trend analysis for a set of products. Users can view and edit product details, add new trend search texts, upload and analyze trends, and visualize trends with an interactive chart. The app allows users to scrape websites for trend-related information, analyze customer reviews, and generate a trend report with structured data visualizations.
+This repository contains a web application that integrates React for frontend and Python for backend services. The application is designed for managing product details, analyzing trends, and interacting with a backend service that uses quantized LLaMA 3 models for advanced trend analysis and forecasting. This README provides detailed steps to set up the entire project, including both the frontend and backend components.
 
-## Features
+## Prerequisites
 
-- **Product Selection and Details:**
-  - Select a product from a dropdown list and view/edit its details such as name, description, and trend search texts.
-  - Dynamically add and remove trend search texts.
+Before you begin, ensure you have the following installed on your system:
 
-- **Trend Suggestion:**
-  - Suggest trends based on product details and the trend duration using an API (`/api/suggest_trends`).
-  - Select suggested trends and add them to the product details.
+- **Node.js** (version 14.x or later)
+- **npm** (Node Package Manager, comes with Node.js)
+- **Python 3.8+**
+- **Pip** (Python Package Manager)
 
-- **Website Links for Data Scraping:**
-  - Add and manage website links that will be used for scraping trend-related data during trend analysis.
+## Getting Started
 
-- **Customer Reviews:**
-  - Display customer reviews and include them in the trend analysis.
+### Step 1: Clone the Repository
 
-- **Trend Analysis:**
-  - Run a detailed trend analysis, including the product's trend search texts, website links, and customer reviews, via an API (`/api/run_trend_analysis`).
-  - Generate a detailed trend report with key insights and structured data.
+Start by cloning this repository to your local machine:
 
-- **Trend Report and Download:**
-  - Display the generated trend report on the page.
-  - Download the trend report as a `.txt` file.
+\`\`\`bash
+git clone https://github.com/ssgupta905/SMILE_SSGUPTA.git
+cd SMILE_SSGUPTA
+\`\`\`
 
-- **Trend Plot:**
-  - Visualize structured trend data over time using a line chart created with `Chart.js`.
+This will download the project files to a directory named `SMILE_SSGUPTA` and navigate into it.
 
-- **Loading Spinner:**
-  - Display a loading spinner while waiting for data from the backend during trend suggestion or trend analysis operations.
+### Step 2: Setting Up the Backend
 
-- **Collapsible Sections:**
-  - Navigate product details, trend search texts, website links, customer reviews, trend reports, and trend plots using collapsible sections.
+The backend of this project utilizes Python with quantized LLaMA 3 models for trend analysis and forecasting. Here's how to set it up:
 
-## Sample Data
+1. **Create a Virtual Environment:**
 
-The application uses a sample dataset to demonstrate its capabilities. The sample data is structured to include detailed information about a warehouse, its inventory, sales data, nearby inventories, and shippers. Below is a description of the key components of the sample data:
+   It's recommended to create a Python virtual environment to manage dependencies:
 
-1. **Warehouse Information:**
-   - Contains details about the warehouse, including its ID, name, and location.
-   - Includes a list of materials in the warehouse inventory, each with attributes like material ID, name, quantity, unit, reorder level, supplier, batch number, last restock date, and next restock date.
+   \`\`\`bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use \`venv\Scripts\activate\`
+   \`\`\`
 
-2. **Sales Data:**
-   - Historical sales data for each material over multiple years.
-   - Each year's data is broken down by month, providing the quantity sold for each material.
+2. **Install Python Dependencies:**
 
-3. **Nearby Inventories:**
-   - Information about nearby warehouses and plants, including their location, distance from the central warehouse, and the inventory or production capacity for each material.
-   - Each entry includes actual and forecasted quantities of materials delivered.
+   Install the necessary Python packages using \`pip\`:
 
-4. **Shippers:**
-   - Details about the shippers used by the warehouse, including their reliability score, average delivery time, and cost per kilometer.
+   \`\`\`bash
+   pip install -r requirements.txt
+   \`\`\`
 
-This structured sample data is used to drive various functionalities within the application, such as inventory management, trend analysis, and visualization of sales data.
+   Ensure that \`requirements.txt\` includes dependencies like \`transformers\`, \`torch\`, \`dash\`, \`dash-bootstrap-components\`, \`pandas\`, \`neuralprophet\`, and others.
 
-## How to Set Up and Run the Application
+3. **Download and Configure LLaMA 3 Quantized Models:**
 
-### Prerequisites
+   Download the quantized LLaMA 3 models and place them in the \`models/\` directory. The backend code expects the model path to be something like \`models/Meta-Llama-3-8B-Instruct-Q5_K_M.gguf\`.
 
-Before running this project, make sure you have the following installed:
+   \`\`\`bash
+   mkdir -p models
+   # Download your quantized LLaMA model here and place it in the models/ directory
+   \`\`\`
 
-- **Node.js**: Ensure that Node.js is installed. If not, download it from [Node.js website](https://nodejs.org/).
-- **npm**: The Node Package Manager (npm) comes with Node.js.
+4. **Load Sample Data:**
 
-### Installation Steps
+   Ensure that the sample data (\`warehouse_inventory.json\`) is located in the project root or a data directory. This JSON file contains the data structure required for the application.
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
+5. **Run the Backend:**
+
+   Start the backend server:
+
+   \`\`\`bash
+   python app.py
+   \`\`\`
+
+   This should start the Flask/Dash server on \`http://localhost:8050\`.
+
+### Step 3: Setting Up the Frontend
+
+The frontend is a React application that interacts with the Python backend. Here’s how to set it up:
+
+1. **Install Create React App:**
+
+   If you haven't already, install \`Create React App\` to set up a new React project with a standard configuration:
+
+   \`\`\`bash
+   npx create-react-app smile-ssgupta
+   \`\`\`
+
+2. **Navigate to the Project Directory:**
+
+   Move to the newly created React app directory:
+
+   \`\`\`bash
+   cd smile-ssgupta
+   \`\`\`
+
+3. **Copy the \`ProductDetails.js\` File:**
+
+   Copy the \`ProductDetails.js\` file from this repository to the \`src/components/\` directory of your React app:
+
+   \`\`\`bash
+   cp ../SMILE_SSGUPTA/ProductDetails.js src/components/
+   \`\`\`
+
+   Ensure that your React app has the \`components/\` directory in \`src/\`.
+
+4. **Install Additional Dependencies:**
+
+   Install the necessary React dependencies:
+
+   \`\`\`bash
+   npm install react-router-dom react-icons chart.js react-modal react-spinners
+   \`\`\`
+
+5. **Optional: Install Bootstrap for Styling:**
+
+   If you want to use Bootstrap for styling, install \`react-bootstrap\` and \`bootstrap\`:
+
+   \`\`\`bash
+   npm install react-bootstrap bootstrap
+   \`\`\`
+
+   Add Bootstrap CSS to your \`index.js\` or \`App.js\` file:
+
+   \`\`\`javascript
+   import 'bootstrap/dist/css/bootstrap.min.css';
+   \`\`\`
+
+6. **Modify \`App.js\` to Include \`ProductDetails.js\`:**
+
+   Update your \`App.js\` file to include the \`ProductDetails\` component and configure routing using \`react-router-dom\`.
+
+   Example \`App.js\`:
+
+   \`\`\`javascript
+   import React from 'react';
+   import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+   import ProductDetails from './components/ProductDetails';
+
+   function App() {
+       return (
+           <Router>
+               <Routes>
+                   <Route path="/details/:productId" element={<ProductDetails />} />
+                   {/* Add more routes as needed */}
+               </Routes>
+           </Router>
+       );
+   }
+
+   export default App;
+   \`\`\`
+
+### Step 4: Running the Frontend
+
+Start the React development server:
+
+\`\`\`bash
+npm start
+\`\`\`
+
+This will start the React application on \`http://localhost:3000\`.
+
+### Step 5: Accessing the Application
+
+With both the backend and frontend running, you can now interact with the application. Open your web browser and navigate to:
+
+- **Frontend:** \`http://localhost:3000\`
+- **Backend (API endpoints):** \`http://localhost:8050\`
+
+### Using the Application
+
+1. **Product Management:**
+   - Select a product from the dropdown menu to view and edit its details.
+   - Add, edit, or delete trend search texts and website links related to the product.
+
+2. **Trend Analysis:**
+   - Upload trend reports and integrate them with sales data for advanced forecasting.
+   - Use the scenario simulation feature to generate and analyze potential scenarios that could impact warehouse operations.
+
+3. **Visualizations:**
+   - View various visualizations such as inventory levels, sales trends, and shipper reliability.
+   - Interact with the dashboard's collapsible sections for better navigation.
+
+### Future Enhancements
+
+- **Advanced Authentication:** Implement user authentication to secure access to the dashboard.
+- **Enhanced Analytics:** Introduce more advanced machine learning models for better predictions.
+- **Expanded Visualizations:** Add more detailed and customizable data visualization options.
+
+## Contributing
+
+If you'd like to contribute to this project, please fork the repository and use a feature branch. Pull requests are welcome.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+By following this README, you should be able to set up, run, and explore the functionalities of the SMILE - SSGUPTA web application.
