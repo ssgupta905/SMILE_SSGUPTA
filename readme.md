@@ -76,7 +76,7 @@ Before you begin, ensure you have the following installed on your system:
 
 - **Node.js** (version 14.x or later)
 - **npm** (Node Package Manager, comes with Node.js)
-- **Python 3.8+**
+- **Python 3.11+**
 - **Pip** (Python Package Manager)
 
 ## Getting Started
