@@ -37,58 +37,26 @@ This web application provides detailed product information along with trend anal
 - **Collapsible Sections:**
   - Navigate product details, trend search texts, website links, customer reviews, trend reports, and trend plots using collapsible sections.
 
-## Frontend Technologies Used
+## Sample Data
 
-- **React**: For building the user interface and managing state with hooks (`useState`, `useEffect`, `useRef`).
-- **React Router**: For handling dynamic routing and navigation.
-- **React Icons**: For using icons such as `FaDownload`, `FaLightbulb`, `FaChevronDown`, etc.
-- **Chart.js**: For creating the trend score visualizations.
-- **ClipLoader**: For the loading spinner while waiting for data.
-- **Modal**: For displaying suggested trends in a popup dialog.
-- **CSS**: For custom styling of the UI.
+The application uses a sample dataset to demonstrate its capabilities. The sample data is structured to include detailed information about a warehouse, its inventory, sales data, nearby inventories, and shippers. Below is a description of the key components of the sample data:
 
-## Backend APIs
+1. **Warehouse Information:**
+   - Contains details about the warehouse, including its ID, name, and location.
+   - Includes a list of materials in the warehouse inventory, each with attributes like material ID, name, quantity, unit, reorder level, supplier, batch number, last restock date, and next restock date.
 
-This application relies on the following backend APIs:
+2. **Sales Data:**
+   - Historical sales data for each material over multiple years.
+   - Each year's data is broken down by month, providing the quantity sold for each material.
 
-1. **`/api/suggest_trends`**:
-   - **Method**: `POST`
-   - **Description**: Suggests trends based on product details and the selected trend duration.
-   - **Request Body**:
-     ```json
-     {
-       "productDetails": { /* Product details */ },
-       "trendDuration": 6  // Number of months
-     }
-     ```
-   - **Response**:
-     ```json
-     {
-       "suggested_trends": ["trend1", "trend2", "trend3"]
-     }
-     ```
+3. **Nearby Inventories:**
+   - Information about nearby warehouses and plants, including their location, distance from the central warehouse, and the inventory or production capacity for each material.
+   - Each entry includes actual and forecasted quantities of materials delivered.
 
-2. **`/api/run_trend_analysis`**:
-   - **Method**: `POST`
-   - **Description**: Runs a trend analysis using product trend search texts, website links, and customer reviews.
-   - **Request Body**:
-     ```json
-     {
-       "trend_descriptions": ["trend1", "trend2"],
-       "website_links": ["link1", "link2"],
-       "customer_reviews": [{ "review": "review text", "rating": 5 }]
-     }
-     ```
-   - **Response**:
-     ```json
-     {
-       "report": "Generated trend report",
-       "structured_data": [
-         { "Week": 1, "Trend Name": "Trend1", "Trend Score": 8 },
-         { "Week": 2, "Trend Name": "Trend2", "Trend Score": 7 }
-       ]
-     }
-     ```
+4. **Shippers:**
+   - Details about the shippers used by the warehouse, including their reliability score, average delivery time, and cost per kilometer.
+
+This structured sample data is used to drive various functionalities within the application, such as inventory management, trend analysis, and visualization of sales data.
 
 ## How to Set Up and Run the Application
 
