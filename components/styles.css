@@ -1,0 +1,353 @@
+/* General Container Styling */
+.container {
+    padding: 20px;
+    max-width: 900px; /* Slightly wider for more content */
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Inputs, Textareas, and Selects */
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 120px;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.button, .icon-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .icon-button:hover {
+    background-color: #0056b3;
+}
+
+.icon-button {
+    margin-left: 10px;
+    background-color: #17a2b8;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button:hover {
+    background-color: #138496;
+}
+
+/* New Trend Input */
+.new-trend {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.new-trend input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Modal Styling */
+.modal {
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.suggestions-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.pill {
+    padding: 8px 12px;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.pill:hover {
+    background-color: #5a6268;
+}
+
+/* Trend Report Section */
+.trend-report {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trend-report textarea {
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+/* Download Button */
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #28a745;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
+
+/* Trend Plot Section */
+.trend-plot {
+    margin-top: 30px;
+}
+
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.new-link input {
+    width: 80%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.new-link button {
+    padding: 5px 10px;
+}
+
+.collapsible-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestions-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pill {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.pill.selected {
+    background-color: #007bff;
+    color: white;
+}
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.content-blur {
+    filter: blur(3px);
+}
+
+.collapsible-section {
+    margin-top: 20px;
+}
+
+.collapsible-header {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-trend, .new-link {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.new-trend input, .new-link input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.new-trend button, .new-link button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.run-analysis-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.run-analysis-button:hover {
+    background-color: #218838;
+}
+
+.button.icon-button {
+    background-color: #dc3545;
+    margin-left: 5px;
+}
+
+.suggestions-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pill {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.pill.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.chart-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
