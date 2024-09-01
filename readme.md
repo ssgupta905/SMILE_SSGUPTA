@@ -1,9 +1,74 @@
 
-# SMILE - SSGUPTA
+# SMILE - SSGUPTA(SIDDHARTHA SENGUPTA AND BARUNA MUKHERJEE)
+
+# Real-Time Forecast and Trend Analysis Dashboard with Scenario Simulation and Decision Engine
 
 ## Overview
 
-This repository contains a web application that integrates React for frontend and Python for backend services. The application is designed for managing product details, analyzing trends, and interacting with a backend service that uses quantized LLaMA 3 models for advanced trend analysis and forecasting. This README provides detailed steps to set up the entire project, including both the frontend and backend components.
+This advanced web application serves as a comprehensive decision engine, providing real-time forecast capabilities, detailed product information, and trend analysis for various products. Users can manage product details, analyze trends, simulate operational scenarios, and visualize data through an interactive dashboard. The application supports decision-making processes by integrating trend analysis with sales data, inventory management, and scenario simulation, offering a holistic view of warehouse operations.
+
+## Features
+
+- **Product Details and Trend Analysis:**
+  - **Product Selection and Management:** 
+    - Select and manage product details, including name, description, and associated trend search texts.
+    - Add or remove trend search texts dynamically to keep up with market changes.
+  
+  - **Trend Suggestion and Integration:**
+    - Utilize the `/api/suggest_trends` API to generate trend suggestions based on product details and specified trend duration.
+    - Add selected trends directly to the product's details for further analysis.
+
+  - **Website Links for Data Scraping:**
+    - Add and manage website links that will be used for scraping relevant trend data during analysis.
+  
+  - **Customer Reviews Analysis:**
+    - Include customer reviews in the trend analysis process to gain deeper insights into market sentiment.
+
+  - **Detailed Trend Analysis and Reporting:**
+    - Execute trend analysis by integrating product details, website links, and customer reviews using the `/api/run_trend_analysis` API.
+    - Generate comprehensive trend reports with key insights, downloadable as `.txt` files.
+
+  - **Interactive Trend Visualization:**
+    - Visualize trend data over time with interactive line charts using `Chart.js`.
+  
+- **Warehouse Inventory Visualization:**
+  - **Current Inventory Levels:**
+    - Display current inventory levels with bar charts, showcasing the quantity of each material in the warehouse.
+  
+  - **Nearby Inventories and Plants Visualization:**
+    - Visualize inventory levels and production capacities of nearby warehouses and plants, comparing actual and forecasted quantities.
+
+- **Sales Data Visualization:**
+  - **Monthly Sales Data Visualization:**
+    - Present monthly sales data for various materials over multiple years using line charts.
+
+- **Trend Analysis and Reporting:**
+  - **Trend Report Upload and Integration:**
+    - Upload external trend reports for integration with sales forecasts.
+  
+  - **Sales Forecasting with Trend Integration:**
+    - Forecast sales data for the next 12 months using the `NeuralProphet` model, with the option to integrate uploaded trend reports.
+
+- **Scenario Simulation and Guidance:**
+  - **AI-Powered Scenario Generation:**
+    - Generate potential operational scenarios based on warehouse data, including sales, inventory, nearby inventories, and shippers data.
+  
+  - **Scenario Impact Simulation:**
+    - Simulate the impact of selected or custom scenarios on warehouse operations, with structured guidance provided on how to address each situation.
+
+- **Collapsible Sections for Enhanced Navigation:**
+  - Easily navigate through different sections of the dashboard, such as inventory visualization, sales data, trend reports, and scenario simulation, using collapsible sections.
+
+- **Data Management and Processing:**
+  - **Inventory Management:**
+    - Extract and process inventory data from a JSON file, keeping track of material quantities and restock dates.
+  
+  - **Sales Data Processing:**
+    - Handle and format historical sales data across multiple years for accurate forecasting and visualization.
+
+  - **Nearby Inventories and Shippers Data Integration:**
+    - Incorporate data on nearby inventories, production capacities, and shippers to offer a comprehensive view of the warehouse's supply chain and logistical operations.
+
 
 ## Prerequisites
 
