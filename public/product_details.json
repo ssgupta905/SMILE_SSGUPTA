@@ -1,0 +1,139 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Insecticides",
+      "description": "A high-performance agricultural chemical for control and management of insect pests across a range of crops.",
+      "type": "Chemical",
+      "unit_of_measurement": "Liters",
+      "trend_descriptions": [
+        "Seasonal trends for demand of highperformance agricultural chemicals in the past three months, focusing on key growing seasons."
+      ],
+      "reviews": [
+                {
+                    "customer_name": "Alice",
+                    "review": "Very effective against aphids. Saw results in just two days.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "Bob",
+                    "review": "Easy to apply, but the smell is quite strong.",
+                    "rating": 4
+                },
+                {
+                    "customer_name": "Charlie",
+                    "review": "Worked well on my roses, but took about a week to see the full effect.",
+                    "rating": 4
+                },
+                {
+                    "customer_name": "Diana",
+                    "review": "Killed most of the insects, but left some residue on the leaves.",
+                    "rating": 3
+                },
+                {
+                    "customer_name": "Edward",
+                    "review": "Not as effective as I expected. Still had pests after two applications.",
+                    "rating": 2
+                },
+                {
+                    "customer_name": "Fiona",
+                    "review": "Great product! Safe to use around pets and kids.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "George",
+                    "review": "Used it on my vegetable garden, and it worked like a charm.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "Helen",
+                    "review": "The nozzle was hard to control, and I ended up wasting a lot.",
+                    "rating": 3
+                },
+                {
+                    "customer_name": "Ian",
+                    "review": "Effective, but pricey compared to other brands.",
+                    "rating": 4
+                },
+                {
+                    "customer_name": "Jane",
+                    "review": "Didn't work well on spider mites. Had to buy a different product.",
+                    "rating": 2
+                },
+                {
+                    "customer_name": "Kevin",
+                    "review": "Excellent! My garden is pest-free, and the plants look healthier.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "Laura",
+                    "review": "Easy to use, but make sure to wear gloves. The chemicals are strong.",
+                    "rating": 4
+                },
+                {
+                    "customer_name": "Mike",
+                    "review": "Saw results in a day! Will definitely buy again.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "Nina",
+                    "review": "Good product, but the packaging could be better.",
+                    "rating": 3
+                },
+                {
+                    "customer_name": "Oscar",
+                    "review": "Works as advertised. No more pests in my garden.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "Paula",
+                    "review": "Not very effective on ants, but worked well on other pests.",
+                    "rating": 3
+                },
+                {
+                    "customer_name": "Quincy",
+                    "review": "Used it on my lawn, and it eliminated all the bugs.",
+                    "rating": 5
+                },
+                {
+                    "customer_name": "Rita",
+                    "review": "The product works, but the instructions were unclear.",
+                    "rating": 3
+                },
+                {
+                    "customer_name": "Steve",
+                    "review": "Effective, but the smell lingers for days.",
+                    "rating": 4
+                },
+                {
+                    "customer_name": "Tina",
+                    "review": "Worked well, but the price is a bit high.",
+                    "rating": 4
+                }
+            ]
+    },
+    {
+      "id": 2,
+      "name": "FlowerSeedsGM",
+      "description": "Genetically modified flower seeds.",
+      "type": "Seeds",
+      "unit_of_measurement": "Packets",
+      "trend_descriptions": [
+        "Demand increases during gardening season.",
+        "Steady growth in urban areas."
+      ],
+      "reviews": [
+                {
+                    "customer_name": "Ursula",
+                    "review": "Safe for my plants, but not very effective on larger pests.",
+                    "rating": 3
+                },
+                {
+                    "customer_name": "Victor",
+                    "review": "Works well, and I love that it's organic.",
+                    "rating": 5
+                }
+            ]
+    }
+  ]
+}
