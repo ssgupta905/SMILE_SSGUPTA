@@ -248,18 +248,8 @@ With both the backend and frontend running, you can now interact with the applic
 
 ### Future Enhancements
 
-- **Advanced Authentication:** Implement user authentication to secure access to the dashboard.
+- **Advanced Authentication and Roles based visibilities:** Implement user authentication to secure access to the dashboard and tole based access to various data.
 - **Enhanced Analytics:** Introduce more advanced machine learning models for better predictions.
 - **Expanded Visualizations:** Add more detailed and customizable data visualization options.
-
-## Contributing
-
-If you'd like to contribute to this project, please fork the repository and use a feature branch. Pull requests are welcome.
-
-## License
-
-This project is licensed under the MIT License.
-
----
 
 By following this README, you should be able to set up, run, and explore the functionalities of the SMILE - SSGUPTA web application.
