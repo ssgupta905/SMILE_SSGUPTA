@@ -1,0 +1,158 @@
+{
+  "warehouse": {
+    "id": "WH001",
+    "name": "Central Warehouse",
+    "location": "New York",
+    "inventory": [
+      {
+        "material_id": "M001",
+        "material_name": "Chemical A",
+        "quantity": 12000,
+        "unit": "liters",
+        "reorder_level": 2000,
+        "supplier": "Supplier X",
+        "batch_no": "BATCH001",
+        "last_restock_date": "2024-05-01",
+        "next_restock_date": "2024-09-01"
+      },
+      {
+        "material_id": "M002",
+        "material_name": "Chemical B",
+        "quantity": 8500,
+        "unit": "liters",
+        "reorder_level": 1000,
+        "supplier": "Supplier Y",
+        "batch_no": "BATCH002",
+        "last_restock_date": "2024-05-02",
+        "next_restock_date": "2024-09-05"
+      },
+      {
+        "material_id": "M003",
+        "material_name": "Chemical C",
+        "quantity": 16000,
+        "unit": "liters",
+        "reorder_level": 3000,
+        "supplier": "Supplier Z",
+        "batch_no": "BATCH003",
+        "last_restock_date": "2024-05-10",
+        "next_restock_date": "2024-09-15"
+      }
+    ],
+  "sales_data": {
+    "2022": {
+      "January": {"Chemical A": 250, "Chemical B": 150, "Chemical C": 300},
+      "February": {"Chemical A": 260, "Chemical B": 160, "Chemical C": 320},
+      "March": {"Chemical A": 270, "Chemical B": 170, "Chemical C": 340},
+      "April": {"Chemical A": 200, "Chemical B": 130, "Chemical C": 250},
+      "May": {"Chemical A": 180, "Chemical B": 120, "Chemical C": 240},
+      "June": {"Chemical A": 160, "Chemical B": 110, "Chemical C": 220},
+      "July": {"Chemical A": 150, "Chemical B": 100, "Chemical C": 200},
+      "August": {"Chemical A": 140, "Chemical B": 90, "Chemical C": 180},
+      "September": {"Chemical A": 130, "Chemical B": 80, "Chemical C": 160},
+      "October": {"Chemical A": 120, "Chemical B": 70, "Chemical C": 140},
+      "November": {"Chemical A": 110, "Chemical B": 60, "Chemical C": 120},
+      "December": {"Chemical A": 100, "Chemical B": 50, "Chemical C": 100}
+    },
+    "2023": {
+      "January": {"Chemical A": 240, "Chemical B": 140, "Chemical C": 290},
+      "February": {"Chemical A": 250, "Chemical B": 150, "Chemical C": 300},
+      "March": {"Chemical A": 260, "Chemical B": 160, "Chemical C": 310},
+      "April": {"Chemical A": 220, "Chemical B": 130, "Chemical C": 250},
+      "May": {"Chemical A": 210, "Chemical B": 120, "Chemical C": 240},
+      "June": {"Chemical A": 200, "Chemical B": 110, "Chemical C": 230},
+      "July": {"Chemical A": 190, "Chemical B": 100, "Chemical C": 220},
+      "August": {"Chemical A": 180, "Chemical B": 90, "Chemical C": 210},
+      "September": {"Chemical A": 170, "Chemical B": 80, "Chemical C": 200},
+      "October": {"Chemical A": 160, "Chemical B": 70, "Chemical C": 190},
+      "November": {"Chemical A": 150, "Chemical B": 60, "Chemical C": 180},
+      "December": {"Chemical A": 140, "Chemical B": 50, "Chemical C": 170}
+    }
+  }
+,
+    "nearby_inventories": [
+    {
+        "warehouse_id": "WH002",
+        "name": "East Warehouse",
+        "location": "Boston",
+        "distance_km": 300,
+        "inventory": {
+            "Chemical A": {
+                "Actual Quantity delivered": 4800,
+                "Forecasted Quantity": 5000
+            },
+            "Chemical B": {
+                "Actual Quantity delivered": 3800,
+                "Forecasted Quantity": 4000
+            },
+            "Chemical C": {
+                "Actual Quantity delivered": 5800,
+                "Forecasted Quantity": 6000
+            }
+        }
+    },
+    {
+        "warehouse_id": "WH003",
+        "name": "West Warehouse",
+        "location": "Chicago",
+        "distance_km": 800,
+        "inventory": {
+            "Chemical A": {
+                "Actual Quantity delivered": 5700,
+                "Forecasted Quantity": 6000
+            },
+            "Chemical B": {
+                "Actual Quantity delivered": 4700,
+                "Forecasted Quantity": 5000
+            },
+            "Chemical C": {
+                "Actual Quantity delivered": 6700,
+                "Forecasted Quantity": 7000
+            }
+        }
+    },
+    {
+        "plant_id": "PL001",
+        "name": "New Jersey Plant",
+        "location": "New Jersey",
+        "distance_km": 100,
+        "production_capacity_per_month": {
+            "Chemical A": {
+                "Actual Quantity delivered": 1200,
+                "Forecasted Quantity": 2000
+            },
+            "Chemical B": {
+                "Actual Quantity delivered": 1100,
+                "Forecasted Quantity": 1500
+            },
+            "Chemical C": {
+                "Actual Quantity delivered": 2100,
+                "Forecasted Quantity": 2500
+            }
+        }
+    }
+],
+    "shippers": [
+      {
+        "shipper_id": "SH001",
+        "name": "Fast Delivery Inc.",
+        "reliability_score": 0.9,
+        "average_delivery_time_days": 2,
+        "cost_per_km": 1.2
+      },
+      {
+        "shipper_id": "SH002",
+        "name": "Reliable Shipping Co.",
+        "reliability_score": 0.85,
+        "average_delivery_time_days": 3,
+        "cost_per_km": 1.1
+      },
+      {
+        "shipper_id": "SH003",
+        "name": "Quick Logistics",
+        "reliability_score": 0.95,
+        "average_delivery_time_days": 1,
+        "cost_per_km": 1.5
+      }
+    ]
+  }
+}
